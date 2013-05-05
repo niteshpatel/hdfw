@@ -1,6 +1,6 @@
 package com.herodevelop.hdfw;
 
-import com.herodevelop.hdlibgdx.Graphics.Image;
+import com.herodevelop.hdlib.Graphics.Image;
 
 public interface Drawable {
 

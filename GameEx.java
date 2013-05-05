@@ -1,6 +1,6 @@
 package com.herodevelop.hdfw;
 
-import com.herodevelop.hdlibgdx.*;
+import com.herodevelop.hdlib.*;
 
 import java.util.HashMap;
 
