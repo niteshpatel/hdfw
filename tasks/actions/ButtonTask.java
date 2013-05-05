@@ -3,7 +3,7 @@ package com.herodevelop.hdfw.tasks.actions;
 import com.herodevelop.hdfw.ScreenEx;
 import com.herodevelop.hdfw.tasks.Task;
 import com.herodevelop.hdfw.tasks.TaskFactory;
-import com.herodevelop.hdlib.Graphics.Image;
+import com.herodevelop.hdlibgdx.Graphics.Image;
 
 public final class ButtonTask extends Task {
 

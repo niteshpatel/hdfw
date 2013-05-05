@@ -1,7 +1,7 @@
 package com.herodevelop.hdfw;
 
 import com.herodevelop.hdfw.tasks.Task;
-import com.herodevelop.hdlib.Screen;
+import com.herodevelop.hdlibgdx.Screen;
 
 import java.util.ArrayList;
 import java.util.Collections;
