@@ -13,7 +13,7 @@ public abstract class GameEx extends Game {
     protected HashMap<ScreenId, ScreenEx> screens;
 
     public void create() {
-        app = new App();
+        app = new App("hdfw");
         file = new Files();
         graphics = new Graphics();
         input = new Input();
