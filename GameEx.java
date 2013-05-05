@@ -10,6 +10,7 @@ public abstract class GameEx extends Game {
     public Files file;
     public Graphics graphics;
     public Input input;
+    public HashMap<String, String> data;
     protected HashMap<ScreenId, ScreenEx> screens;
 
     public void create() {
@@ -17,6 +18,7 @@ public abstract class GameEx extends Game {
         file = new Files();
         graphics = new Graphics();
         input = new Input();
+        data = new HashMap<String, String>();
     }
 
     public abstract void createEx();
