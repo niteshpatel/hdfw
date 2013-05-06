@@ -57,7 +57,7 @@ public abstract class ScreenEx extends Screen {
         tasks = new ArrayList<Task>();
     }
 
-    public final void queueTasks() {
+    final void queueTasks() {
         // Add list of queued tasks to tasks for next update
         for (Task t : tasksQ) {
             tasks.add(t);
@@ -113,16 +113,16 @@ public abstract class ScreenEx extends Screen {
     protected void onStart() {
     }
 
-    protected void onStop() {
+    void onStop() {
     }
 
-    protected void onFreeze() {
+    void onFreeze() {
     }
 
-    protected void onThaw() {
+    void onThaw() {
     }
 
-    public final void stop() {
+    protected final void stop() {
         game.app.log(((Object) this).getClass().getName() + ".onStop");
         this.suspended = false;
         this.onStop();

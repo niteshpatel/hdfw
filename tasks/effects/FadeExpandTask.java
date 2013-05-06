@@ -8,7 +8,7 @@ public final class FadeExpandTask extends Task {
 
     private final Drawable obj;
     private final int paintIndex;
-    private float delay;
+    private final float delay;
     private float scale;
     private float alpha;
 
