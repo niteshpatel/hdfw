@@ -122,7 +122,7 @@ public abstract class ScreenEx extends Screen {
     void onThaw() {
     }
 
-    protected final void stop() {
+    public final void stop() {
         game.app.log(((Object) this).getClass().getName() + ".onStop");
         this.suspended = false;
         this.onStop();
