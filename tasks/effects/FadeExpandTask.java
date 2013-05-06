@@ -8,13 +8,15 @@ public final class FadeExpandTask extends Task {
 
     private final Drawable obj;
     private final int paintIndex;
+    private float delay;
     private float scale;
     private float alpha;
 
-    public FadeExpandTask(ScreenEx screen, Drawable obj, int paintIndex) {
+    public FadeExpandTask(ScreenEx screen, Drawable obj, float delay, int paintIndex) {
         super(screen);
 
         this.obj = obj;
+        this.delay = delay;
         this.paintIndex = paintIndex;
 
         // Set the image config
@@ -24,7 +26,9 @@ public final class FadeExpandTask extends Task {
 
     @Override
     public final void update(float delta) {
-        alpha -= 0.05;
+
+        alpha -= (delta / delay);
+        if (alpha < 0) alpha = 0;
 
         // The alpha is not really relevant here, we just used the value as
         // we need some way to slow down the upscale as it reaches the limit
