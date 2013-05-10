@@ -13,10 +13,14 @@ public abstract class GameEx extends Game {
     public HashMap<String, String> data;
     protected HashMap<ScreenId, ScreenEx> screens;
 
+    protected abstract int getVirtualWidth();
+
+    protected abstract int getVirtualHeight();
+
     public void create() {
         app = new App("hdfw");
         file = new Files();
-        graphics = new Graphics();
+        graphics = new Graphics(getVirtualWidth(), getVirtualHeight());
         input = new Input();
         data = new HashMap<String, String>();
     }
