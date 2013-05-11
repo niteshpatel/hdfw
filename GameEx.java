@@ -7,6 +7,7 @@ import java.util.HashMap;
 public abstract class GameEx extends Game {
 
     public App app;
+    public Audio audio;
     public Files file;
     public Graphics graphics;
     public Input input;
@@ -19,6 +20,7 @@ public abstract class GameEx extends Game {
 
     public void create() {
         app = new App("hdfw");
+        audio = new Audio();
         file = new Files();
         graphics = new Graphics(getVirtualWidth(), getVirtualHeight());
         input = new Input();
