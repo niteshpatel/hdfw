@@ -8,6 +8,7 @@ public abstract class GameEx extends Game {
 
     public App app;
     public Audio audio;
+    public Billable billing;
     public Files file;
     public Graphics graphics;
     public Input input;
