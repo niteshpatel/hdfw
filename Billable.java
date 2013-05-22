@@ -8,7 +8,11 @@ public interface Billable {
 
     public void queryInventoryAsync();
 
+    public boolean isGdxQueryInventoryFinished();
+
     public void consumeAsync();
 
-    public void destroy();
+    public boolean isGdxConsumeFinished();
+
+    public void launchPurchaseFlow();
 }
