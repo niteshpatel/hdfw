@@ -7,10 +7,12 @@ public abstract class Task {
 
     protected final ScreenEx screen;
     protected final GameEx game;
+    private boolean skippingInput;
 
     public Task(ScreenEx screen) {
         this.screen = screen;
         this.game = screen.game;
+        this.setSkippingInput(false);
     }
 
     public void handleInput(float delta) {
@@ -32,5 +34,13 @@ public abstract class Task {
 
     public boolean isDone() {
         return false;
+    }
+
+    public boolean isSkippingInput() {
+        return skippingInput;
+    }
+
+    public void setSkippingInput(boolean skippingInput) {
+        this.skippingInput = skippingInput;
     }
 }

@@ -29,7 +29,13 @@ public abstract class ScreenEx extends Screen {
 
             // Inputs must be handled before update, otherwise you risk user
             // input modifying something they have not yet become aware of
-            t.handleInput(delta);
+            // (skip inputs for one iteration, usually when another task
+            // is overriding the inputs)
+            if (!t.isSkippingInput()) {
+                t.handleInput(delta);
+            } else {
+                t.setSkippingInput(false);
+            }
             t.update(delta);
         }
     }
