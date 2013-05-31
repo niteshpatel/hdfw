@@ -54,12 +54,17 @@ public abstract class ScreenEx extends Screen {
         for (Task t : tasks) {
             if (!t.isDone()) {
                 filtered.add(t);
+            } else {
+                t.destroy();
             }
         }
         tasks = filtered;
     }
 
     private void clearTasks() {
+        for (Task t : tasks) {
+            t.destroy();
+        }
         tasks = new ArrayList<Task>();
     }
 

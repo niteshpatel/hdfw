@@ -43,4 +43,7 @@ public abstract class Task {
     public void setSkippingInput(boolean skippingInput) {
         this.skippingInput = skippingInput;
     }
+
+    public void destroy() {
+    }
 }
