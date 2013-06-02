@@ -66,6 +66,8 @@ public final class ButtonTask extends Task {
             else if (pressed) {
                 pressed = false;
                 screen.addTask(taskFactory.newTask());
+            } else if (scale > 1) {
+                scale -= 0.02;
             }
         }
 
